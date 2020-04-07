@@ -1,12 +1,9 @@
 import React from 'react';
 // import logo from '../../assets/images/logo.svg';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Container, Navbar, Nav } from 'react-bootstrap';
 import '../../assets/app.css';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -35,9 +32,19 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div>
-          <h1>Hey this is my react site!</h1>
-        </div>
+				<Container className="p-0" fluid>
+					<Navbar bg="light" expand="lg">
+						<Navbar.Brand>Courtney!</Navbar.Brand>
+						<Navbar.Toggle aria-controls="navbar-toggle" />
+						<Navbar.Collapse id="navbar-toggle">
+							<Nav className="ml-auto">
+								<Nav.Link to="/">Home</Nav.Link>
+								<Nav.Link to="/about">About</Nav.Link>
+								<Nav.Link to="/contact">Contact</Nav.Link>
+							</Nav>
+						</Navbar.Collapse>
+					</Navbar>
+				</Container>
       </Router>
     );
   }

@@ -1,5 +1,11 @@
 import React from 'react';
-import logo from '../../assets/images/logo.svg';
+// import logo from '../../assets/images/logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import '../../assets/app.css';
 
 class App extends React.Component {
@@ -28,9 +34,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Hey this is my react site!</h1>
-      </div>
+      <Router>
+        <div>
+          <h1>Hey this is my react site!</h1>
+        </div>
+      </Router>
     );
   }
 }

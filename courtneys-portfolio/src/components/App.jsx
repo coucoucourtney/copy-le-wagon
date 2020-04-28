@@ -1,8 +1,11 @@
 import React from 'react';
-// import logo from '../../assets/images/logo.svg';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import '../../assets/app.css';
+
+// import logo from '../../assets/images/logo.svg';
+
+import { Footer } from './Footer';
 
 
 class App extends React.Component {
@@ -34,7 +37,7 @@ class App extends React.Component {
       <Router>
 				<Container className="p-0" fluid>
 					<Navbar bg="light" expand="lg">
-						<Navbar.Brand>Courtney!</Navbar.Brand>
+						<Navbar.Brand>C$!</Navbar.Brand>
 						<Navbar.Toggle aria-controls="navbar-toggle" />
 						<Navbar.Collapse id="navbar-toggle">
 							<Nav className="ml-auto">
@@ -44,6 +47,7 @@ class App extends React.Component {
 							</Nav>
 						</Navbar.Collapse>
 					</Navbar>
+         <Footer/>
 				</Container>
       </Router>
     );
